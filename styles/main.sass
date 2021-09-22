@@ -1,0 +1,60 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+*::selection
+    background: #a00
+    color: #000
+
+body
+    margin: 0
+    height: 100vh
+    font-family: 'Mak', serif
+
+.container, .container2
+    height: 100vh
+    position: absolute
+    width: 100%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    transition: clip-path 0.5s
+
+    .img
+        background: url('../assets/bg1.jpg')
+        background-size: cover
+        height: 100vh
+
+    .content
+        position: absolute
+        z-index: 1
+        display: grid
+        place-items: center
+        height: 100vh
+        width: 100%
+        color: white
+
+        button
+            position: relative
+            top: 6rem
+            padding: 13px
+            font-size: 1.3rem
+            background: #a00
+            border: 1px 1px 0 0 white
+            border-radius: 7px
+            color: black
+            font-weight: 500
+            box-shadow: red 2px 2px 30px
+            cursor: pointer
+
+        h1
+            font-size: 5rem
+            position: absolute
+
+.container2
+    z-index: -1
+
+    .img
+        background: url('../assets/bg2.jpg')
+
+// body:hover .container
+//     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
